@@ -1,0 +1,20 @@
+.access {
+      @include section;
+      @include paddingTop;
+
+      &__heading {
+            @include maxWidth;
+      }
+
+      &__img {
+            background: url(../images/image-devices.png) center no-repeat;
+            background-size: contain;
+            height: 11.25rem;
+            width: 100%;
+
+            @include responsive("laptop") {
+                  height: 30rem;
+                  background-size: contain;
+            }
+      }
+}

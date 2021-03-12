@@ -1,0 +1,12 @@
+.clipboard {
+      @include section;
+      @include paddingTop;
+
+      @include responsive("tablet") {
+            @include maxWidth;
+      }
+
+      &__buttons {
+            @extend .header__buttons;
+      }
+}

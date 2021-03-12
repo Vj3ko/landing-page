@@ -1,0 +1,50 @@
+.track {
+      @include section;
+      @include paddingTop;
+
+      @include responsive("laptop") {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+      }
+
+      &__heading {
+            @include maxWidth;
+      }
+
+      &__content {
+            @include responsive("laptop") {
+                  display: flex;
+            }
+      }
+
+      &__img {
+            background: url(../images/image-computer.png) center no-repeat;
+            background-size: contain;
+            height: 15rem;
+
+            @include responsive("laptop") {
+                  height: 36rem;
+                  flex-basis: 60%;
+                  margin-left: -6%;
+            }
+      }
+
+      &__options {
+            @include responsive("laptop") {
+                  flex-basis: 40%;
+                  text-align: left;
+                  padding-right: 12%;
+                  padding-left: 2%;
+            }
+      }
+
+      &__item {
+            padding-top: 3.75rem;
+
+            p {
+                  margin: 1.2rem 0 0;
+                  padding: 0;
+            }
+      }
+}

@@ -1,0 +1,58 @@
+.header {
+      @include section;
+      @include maxWidth;
+
+      &__logo {
+            padding-top: 7.5rem;
+            padding-bottom: 4.6875rem;
+      }
+
+      h1 {
+            font-size: 1.875rem;
+            color: $darkGrayBlue;
+
+            @include responsive("tablet") {
+                  font-size: 2.25rem;
+            }
+      }
+
+      &__buttons {
+            a {
+                  display: block;
+                  padding: 1rem;
+                  font-size: 1rem;
+                  font-weight: bold;
+                  color: $white;
+                  text-decoration: none;
+                  margin-bottom: 1.5625rem;
+                  border-radius: 3rem;
+
+                  @include responsive("tablet") {
+                        display: inline-block;
+                        width: 35%;
+                        margin-left: 0.625rem;
+                        margin-right: 0.625rem;
+                  }
+            }
+
+            .ios-btn {
+                  background: $strongCyan;
+                  box-shadow: 0 2px 10px $strongCyan;
+                  transition: background 400ms ease-in-out;
+
+                  &:hover {
+                        background: hsl(171, 66%, 48%);
+                  }
+            }
+
+            .mac-btn {
+                  background: $lightBlue;
+                  box-shadow: 0 2px 10px $lightBlue;
+                  transition: background 400ms ease-in-out;
+
+                  &:hover {
+                        background: hsl(233, 100%, 73%);
+                  }
+            }
+      }
+}

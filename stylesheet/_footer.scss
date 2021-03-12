@@ -1,0 +1,97 @@
+.footer {
+      @include section;
+      margin-top: 9rem;
+
+      background: #f5f6f8;
+
+      &__container {
+            @include responsive("tablet") {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin: auto;
+                  max-width: 70rem;
+                  text-align: left;
+            }
+      }
+
+      &__logo img {
+            height: 3.5rem;
+            width: 3.5rem;
+            margin: 3.125rem 0;
+      }
+
+      &__list {
+            list-style-type: none;
+
+            li:not(:last-child) {
+                  margin-bottom: 2.25rem;
+
+                  @include responsive("tablet") {
+                        margin-bottom: 1rem;
+                  }
+            }
+
+            a {
+                  font-size: 1rem;
+                  font-weight: bold;
+                  text-decoration: none;
+                  color: $darkGrayBlue;
+                  transition: color 300ms ease-in-out;
+
+                  &:hover {
+                        color: $strongCyan;
+                  }
+            }
+
+            @include responsive("tablet") {
+                  display: flex;
+                  align-items: center;
+                  flex-flow: row wrap;
+                  padding-left: 8.125rem;
+
+                  li {
+                        flex-basis: 20%;
+                        margin-right: 3rem;
+                        margin-bottom: 1rem;
+                  }
+
+                  li:nth-child(1) {
+                        order: 1;
+                  }
+                  li:nth-child(2) {
+                        order: 4;
+                  }
+                  li:nth-child(3) {
+                        order: 2;
+                  }
+                  li:nth-child(4) {
+                        order: 5;
+                  }
+                  li:nth-child(5) {
+                        order: 3;
+                  }
+            }
+      }
+
+      &__social {
+            padding: 2.125rem;
+
+            :nth-child(2) {
+                  margin: 0 2.5rem;
+            }
+
+            a svg * {
+                  transition: all 300ms ease-in-out;
+            }
+
+            :hover svg * {
+                  fill: $strongCyan;
+            }
+
+            @include responsive("tablet") {
+                  display: flex;
+                  padding: 0;
+            }
+      }
+}

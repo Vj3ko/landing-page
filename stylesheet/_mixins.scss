@@ -1,0 +1,58 @@
+@mixin section {
+      text-align: center;
+      padding: 0 2rem;
+}
+
+@mixin maxWidth {
+      max-width: 40rem;
+      margin: auto;
+}
+
+@mixin paddingTop {
+      padding-top: 9rem;
+}
+
+@mixin responsive($breakpoint) {
+      @if $breakpoint == tablet {
+            @media only screen and (min-width: 48em) {
+                  @content;
+            }
+      }
+      //768 px
+      @if $breakpoint == laptop {
+            @media only screen and (min-width: 62.5em) {
+                  @content;
+            }
+      }
+      // 1000px
+}
+
+// fade style classes
+.fade-in {
+      opacity: 0;
+      transition: opacity 500ms ease-in;
+}
+
+.fade-in.appear {
+      opacity: 1;
+}
+
+.from-left {
+      transform: translateX(-50%);
+}
+
+.from-right {
+      transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+      transition: opacity 500ms ease-in, transform 700ms ease-in-out;
+      opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+      transform: translateX(0);
+      opacity:1;
+}

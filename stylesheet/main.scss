@@ -1,0 +1,53 @@
+@import "mixins";
+@import "variables";
+@import "header";
+@import "track";
+@import "access";
+@import "workflow";
+@import "clipboard";
+@import "footer";
+
+*,
+*::before,
+*::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: $font;
+      background: url(../images/bg-header-mobile.png) no-repeat;
+      background-size: contain;
+      overflow-x: hidden;
+
+      @include responsive("tablet") {
+            background: url(../images/bg-header-desktop.png) no-repeat;
+            background-size: 100%;
+      }
+}
+
+p {
+      font-size: 0.95rem;
+      margin: 1.5925rem 0 3.3125rem;
+      line-height: 1.7;
+      color: $lightGrayBlue;
+}
+
+h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $darkGrayBlue;
+
+      @include responsive("tablet") {
+            font-size: 1.8125rem;
+      }
+}
+
+h3 {
+      font-size: 1.25rem;
+
+      @include responsive("tablet") {
+            font-size: 1.4rem;
+      }
+}
